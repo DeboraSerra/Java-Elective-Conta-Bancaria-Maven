@@ -14,7 +14,9 @@ public class AccountNumberFormatter {
   public String formatAccountNumber(int literalAccountNumber) {
     String accountAsString = String.format("%s", literalAccountNumber);
     int accountLength = accountAsString.length();
-    if (accountLength == 6) return  accountAsString;
+    if (accountLength == 6) {
+      return  accountAsString;
+    }
     if (accountLength < 6) {
       int leadingZeros = 6 - accountLength;
       String zeros = "";
